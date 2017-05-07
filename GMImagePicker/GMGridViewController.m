@@ -128,11 +128,6 @@ NSString * const GMGridViewCellIdentifier = @"GMGridViewCellIdentifier";
     self.imageManager = [[PHCachingImageManager alloc] init];
     [self resetCachedAssets];
     [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
-    
-    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
-    {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -200,7 +195,7 @@ NSString * const GMGridViewCellIdentifier = @"GMGridViewCellIdentifier";
 - (void)setupViews
 {
     self.collectionView.backgroundColor = [UIColor clearColor];
-    self.view.backgroundColor = [self.picker pickerBackgroundColor];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setupButtons
